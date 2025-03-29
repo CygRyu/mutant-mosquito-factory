@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,64 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom game colors
+				biohazard: {
+					DEFAULT: '#1c3e36',
+					50: '#f0f9f7',
+					100: '#dcf0ea',
+					200: '#bce0d6',
+					300: '#92c9bb',
+					400: '#64ab9a',
+					500: '#468e7e',
+					600: '#367366',
+					700: '#2d5c53',
+					800: '#274a44',
+					900: '#1c3e36',
+					950: '#0f2923',
+				},
+				toxic: {
+					DEFAULT: '#98e02a',
+					50: '#f5ffe6',
+					100: '#e9ffc5',
+					200: '#d5ff91',
+					300: '#bbf454',
+					400: '#a4e92e',
+					500: '#83cf0c',
+					600: '#65a506',
+					700: '#4c7d0b',
+					800: '#3c640f',
+					900: '#335410',
+					950: '#193000',
+				},
+				clinical: {
+					DEFAULT: '#e0f2fe',
+					50: '#f0f9ff',
+					100: '#e0f2fe',
+					200: '#b9e6fe',
+					300: '#7dd3fc',
+					400: '#38bdf8',
+					500: '#0ea5e9',
+					600: '#0284c7',
+					700: '#0369a1',
+					800: '#075985',
+					900: '#0c4a6e',
+					950: '#082f49',
+				},
+				warning: {
+					DEFAULT: '#ef4444',
+					50: '#fef2f2',
+					100: '#fee2e2',
+					200: '#fecaca',
+					300: '#fca5a5',
+					400: '#f87171',
+					500: '#ef4444',
+					600: '#dc2626',
+					700: '#b91c1c',
+					800: '#991b1b',
+					900: '#7f1d1d',
+					950: '#450a0a',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +142,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' },
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-1deg)' },
+					'50%': { transform: 'rotate(1deg)' },
+				},
+				'bubble': {
+					'0%': { transform: 'scale(1)', opacity: '1' },
+					'50%': { transform: 'scale(1.05)', opacity: '0.8' },
+					'100%': { transform: 'scale(1)', opacity: '1' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+				'wiggle': 'wiggle 2s ease-in-out infinite',
+				'bubble': 'bubble 3s ease-in-out infinite',
 			}
 		}
 	},

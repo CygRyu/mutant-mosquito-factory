@@ -1,13 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { GameStateProvider } from "@/context/GameStateContext";
+import Header from "@/components/Header";
+import Dashboard from "@/components/Dashboard";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <GameStateProvider>
+      <div className="min-h-screen flex flex-col bg-biohazard-950 text-clinical-100">
+        <Header />
+        <main className="flex-1 container mx-auto py-6">
+          <Dashboard />
+        </main>
+        <footer className="bg-biohazard-900 border-t border-biohazard-700 py-4 px-6">
+          <div className="container mx-auto text-center text-biohazard-300 text-sm">
+            <p>The Breeding Pits · Classified Research Facility · Clearance Level: Alpha</p>
+          </div>
+        </footer>
       </div>
-    </div>
+    </GameStateProvider>
   );
 };
 
