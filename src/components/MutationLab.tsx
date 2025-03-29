@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Progress } from "@/components/ui/progress";
-import { Flask, AlertTriangle, Skull, FlaskConical, Zap } from "lucide-react";
+import { FlaskConical, AlertTriangle, Skull, Zap } from "lucide-react";
 import { formatNumber } from "@/utils/formatNumber";
 
 const MutationLab = () => {
@@ -121,7 +121,7 @@ const MutationLab = () => {
                 <CardHeader className="pb-2">
                   <div className="flex justify-between items-start">
                     <div className="flex items-center">
-                      <Flask className={`w-5 h-5 mr-2 ${
+                      <FlaskConical className={`w-5 h-5 mr-2 ${
                         mutation.warningLevel === 1 ? 'text-toxic-400' : 
                         mutation.warningLevel === 2 ? 'text-warning-500' :
                         'text-warning-600'
